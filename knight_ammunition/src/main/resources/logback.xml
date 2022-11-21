@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true">
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <Pattern>%msg%n</Pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>application.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover. Make sure the path matches the one in the file element or else
+             the rollover logs are placed in the working directory. -->
+            <fileNamePattern>/srv/logs/application_%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>5MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <!-- keep 30 days' worth of history -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%d %-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="emailAppender" class="ch.qos.logback.classic.net.SMTPAppender">
+        <appender name="emailAppender" class="ch.qos.logback.classic.net.SMTPAppender">
+            <smtpHost>smtp.gmail.com</smtpHost>
+            <smtpPort>587</smtpPort>
+            <STARTTLS>true</STARTTLS>
+            <asynchronousSending>false</asynchronousSending>
+            <username>example1234@gmail.com</username>
+            <password>example1234</password>
+            <to>random1234@gmail.com</to>
+            <from>example1234@gmail.com</from>
+            <subject>BAELDUNG: %logger{20} - %msg</subject>
+            <layout class="ch.qos.logback.classic.html.HTMLLayout"/>
+        </appender>
+        <cyclicBufferTracker class="ch.qos.logback.core.spi.CyclicBufferTracker">
+            <bufferSize>1</bufferSize>
+        </cyclicBufferTracker>
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="consoleAppender" />
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="emailAppender"/>
+    </root>
+</configuration>
+
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<Configuration level="All" packages="">-->
+<!--    <Appenders>-->
+<!--        <Console name="Console" target="SYSTEM_OUT">-->
+<!--            <PatternLayout pattern="%msg%n"/>-->
+<!--        </Console>-->
+<!--        <File name="MyFile" fileName="all.log" immediateFlush="false" append="true">-->
+<!--            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>-->
+<!--        </File>-->
+<!--        <SMTP name="ErrorEmailAppender"-->
+<!--              smtpHost="mail.gmx.com"-->
+<!--              smtpUsername="denysdenysdenys@gmx.com"-->
+<!--              smtpPassword="BaCKto200x"-->
+<!--              from="denysdenysdenys@gmx.com"-->
+<!--              to="denysdenysdenys@gmx.com"-->
+<!--              subject="Ammunition management system. ERRORS LOG"-->
+<!--              bufferSize="4"-->
+<!--              smtpProtocol="smtps"-->
+<!--              smtpPort="465"-->
+<!--              smtpDebug="true"-->
+<!--              ignoreExceptions="false">-->
+<!--            &lt;!&ndash;            <param name="EvaluatorClass" value="TriggerLogEvent" />&ndash;&gt;-->
+<!--&lt;!&ndash;            <layout class="org.apache.log4j.PatternLayout">&ndash;&gt;-->
+<!--&lt;!&ndash;                <param name="ConversionPattern" value="%t %m%n"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            </layout>&ndash;&gt;-->
+<!--&lt;!&ndash;            <filter class="org.apache.log4j.aria.LevelRangeFilter">&ndash;&gt;-->
+<!--&lt;!&ndash;                <param name="LevelMin" value="warn"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <param name="LevelMax" value="warn"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            </filter>&ndash;&gt;-->
+<!--        </SMTP>-->
+<!--        <Async name="EMAIL_ASYNC" bufferSize="1">-->
+<!--            <AppenderRef ref="ErrorEmailAppender"/>-->
+<!--        </Async>-->
+<!--    </Appenders>-->
+<!--    <Loggers>-->
+<!--        <Root level="debug">-->
+<!--            <AppenderRef ref="Console"/>-->
+<!--            <AppenderRef ref="MyFile"/>-->
+<!--            <AppenderRef ref="ErrorEmailAppender"/>-->
+<!--&lt;!&ndash;            <AppenderRef ref="EMAIL_ASYNC"/>&ndash;&gt;-->
+<!--        </Root>-->
+<!--    </Loggers>-->
+<!--</Configuration>-->

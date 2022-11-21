@@ -1,0 +1,49 @@
+2022-11-15 13:43:56,300 10173 [main] INFO  AbstractCommand - CraftAmmunitionCommand is executed
+2022-11-15 13:43:57,531 11404 [main] INFO  AbstractCommand - CraftAmmunitionCommand is executed
+2022-11-15 13:43:58,500 12373 [main] INFO  AbstractCommand - CraftAmmunitionCommand is executed
+2022-11-15 13:43:59,136 13009 [main] INFO  AbstractCommand - CraftAmmunitionCommand is executed
+2022-11-15 13:44:01,653 15526 [main] INFO  AbstractCommand - PrintTotalAmmunitionCommand is executed
+2022-11-15 13:44:03,069 16942 [main] INFO  AbstractCommand - DeleteAmmunitionCommandById is executed
+2022-11-15 13:44:08,726 22599 [main] INFO  AbstractCommand - PrintTotalAmmunitionCostCommand is executed
+2022-11-15 13:44:10,887 24760 [main] INFO  AbstractCommand - PrintAllAmmunitionSortedByWeightCommand is executed
+2022-11-15 13:44:13,796 27669 [main] INFO  AbstractCommand - ExitProgramCommand is executed
+2022-11-15 13:47:00,001 418  [main] INFO  o.example.service.AmmunitionService - App is started
+2022-11-15 13:48:43,805 446  [main] INFO  o.example.service.AmmunitionService - App is started
+2022-11-15 13:48:48,420 5061 [main] INFO  AbstractCommand - CraftAmmunitionCommand is executed
+2022-11-15 13:48:48,922 5563 [main] INFO  AbstractCommand - CraftAmmunitionCommand is executed
+2022-11-15 13:48:49,382 6023 [main] INFO  AbstractCommand - CraftAmmunitionCommand is executed
+2022-11-15 13:48:49,826 6467 [main] INFO  AbstractCommand - CraftAmmunitionCommand is executed
+2022-11-15 13:48:58,213 14854 [main] INFO  AbstractCommand - DeleteAmmunitionCommandById is executed
+2022-11-15 13:48:58,965 15606 [main] WARN  o.example.service.AmmunitionService - Input data for delete was incorrect
+2022-11-15 13:49:11,336 27977 [main] INFO  AbstractCommand - EmptyCommand is executed
+2022-11-15 13:51:10,257 432  [main] INFO  o.example.service.AmmunitionService - App is started
+2022-11-15 13:51:13,562 3737 [main] INFO  AbstractCommand - EmptyCommand is executed
+2022-11-15 13:51:13,563 3738 [main] WARN  org.example.command.ConsoleControl - Incorrect input. Try again
+2022-11-15 13:51:28,230 18405 [main] WARN  org.example.command.ConsoleControl - Incorrect input. Try again
+2022-11-15 13:51:30,057 20232 [main] WARN  org.example.command.ConsoleControl - Incorrect input. Try again
+2022-11-15 13:51:33,966 24141 [main] INFO  AbstractCommand - PrintAllAmmunitionInCostRangeCommand is executed
+2022-11-15 13:51:40,604 30779 [main] INFO  AbstractCommand - ExitProgramCommand is executed
+2022-11-17 22:45:52,777 272  [main] INFO  o.example.service.AmmunitionService - App is started
+2022-11-17 22:49:45,154 211  [main] INFO  o.example.service.AmmunitionService - App is started
+2022-11-17 22:51:13,124 226  [main] INFO  o.example.service.AmmunitionService - App is started
+2022-11-17 22:51:19,458 6560 [main] INFO  AbstractCommand - PrintTotalAmmunitionCommand is executed
+2022-11-17 22:51:31,193 18295 [main] INFO  AbstractCommand - CraftAmmunitionCommand is executed
+2022-11-17 22:53:53,434 206  [main] INFO  o.example.service.AmmunitionService - App is started
+2022-11-17 22:53:56,607 3379 [main] INFO  AbstractCommand - CraftAmmunitionCommand is executed
+2022-11-17 23:05:06,836 243  [main] INFO  o.example.service.AmmunitionService - App is started
+2022-11-17 23:05:09,754 3161 [main] INFO  AbstractCommand - CraftAmmunitionCommand is executed
+2022-11-17 23:05:13,605 7012 [main] INFO  AbstractCommand - ExitProgramCommand is executed
+2022-11-17 23:11:46,383 214  [main] INFO  o.example.service.AmmunitionService - App is started
+2022-11-17 23:47:30,358 2144189 [main] INFO  AbstractCommand - CraftAmmunitionCommand is executed
+2022-11-17 23:47:38,625 2152456 [main] INFO  AbstractCommand - PrintTotalAmmunitionCostCommand is executed
+2022-11-17 23:47:48,097 2161928 [main] INFO  AbstractCommand - PrintTotalAmmunitionCommand is executed
+2022-11-17 23:47:53,056 2166887 [main] INFO  AbstractCommand - CraftAmmunitionCommand is executed
+2022-11-17 23:47:58,191 2172022 [main] INFO  AbstractCommand - PrintTotalAmmunitionCommand is executed
+2022-11-17 23:48:09,503 2183334 [main] INFO  AbstractCommand - PrintAllAmmunitionSortedByWeightCommand is executed
+2022-11-17 23:48:15,365 2189196 [main] INFO  AbstractCommand - PrintAllAmmunitionInCostRangeCommand is executed
+2022-11-17 23:56:37,422 2691253 [main] INFO  AbstractCommand - DeleteAmmunitionCommandById is executed
+2022-11-21 10:50:15,966 422  [main] INFO  o.example.service.AmmunitionService - App is started
+2022-11-21 10:53:04,403 313  [main] INFO  o.example.service.AmmunitionService - App is started
+2022-11-21 10:53:48,326 274  [main] INFO  o.example.service.AmmunitionService - App is started
+2022-11-21 10:55:42,424 280  [main] INFO  o.example.service.AmmunitionService - App is started
+2022-11-21 10:58:17,362 319  [main] INFO  o.example.service.AmmunitionService - App is started
