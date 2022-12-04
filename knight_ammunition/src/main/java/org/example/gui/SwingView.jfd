@@ -1,0 +1,80 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.3" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+			"$layoutConstraints": "hidemode 3,align center center,gap 10 10"
+			"$columnConstraints": "[grow,fill]"
+			"$rowConstraints": "[18][][]"
+		} ) {
+			name: "this"
+			"font": new java.awt.Font( "JetBrains Mono", 0, 13 )
+			"minimumSize": new java.awt.Dimension( 425, 500 )
+			"preferredSize": new java.awt.Dimension( 795, 500 )
+			"requestFocusEnabled": false
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "textArea1"
+					"wrapStyleWord": true
+				} )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "pad 0,cell 0 0,dock center,wmin 200,hmin 200"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "show_all"
+				"text": "Show All"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button3", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "show_all", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 1,height 40:40"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "show_by_id"
+				"text": "Show by ID"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "show_by_id", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 1,height 40:40"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "delete_by_id"
+				"text": "Delete by ID"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "delete_by_id", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 2,height 40:40"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "craft"
+				"text": "Craft"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "craft", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 2,height 40:40"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "print_total_cost"
+				"text": "Print Total Cost"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "print_total_cost", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 2,height 40:40"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "print_total_in_cost_range"
+				"text": "Print Total In Cost Range"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "print_total_in_cost_range", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 3,height 40:40"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "print_sorted_by_weight"
+				"text": "Print Sorted by Weight"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "print_sorted_by_weight", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 0 3,height 40:40"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 60, 65 )
+			"size": new java.awt.Dimension( 750, 470 )
+		} )
+	}
+}
